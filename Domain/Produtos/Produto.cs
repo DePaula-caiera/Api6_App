@@ -7,4 +7,5 @@ public class Produto : Entity
     public Categoria? Categoria { get;}
     public string? Descricao { get; set; }
     public bool HasEstoque { get; set; }
+    public bool Ativo { get; set; } = true;
 }
