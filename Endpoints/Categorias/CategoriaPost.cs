@@ -13,12 +13,15 @@ public class CategoriaPost
     {
         var categoria = new Categoria
         {
-            Nome = categoriaRequest.Nome
+            Nome = categoriaRequest.Nome,
+            CreateBy = "TESTE",
+            CreatedOn = DateTime.Now,
+            EditedBy = "TESTE",
+            EditedOn = DateTime.Now
         };
-        context.Categorias.Add(categoria);
+        context.Categorias?.Add(categoria);
         context.SaveChanges();
 
         return Results.Created($"/categorias/{categoria.Id}", categoria.Id);
-
     }
 }

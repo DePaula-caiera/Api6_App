@@ -2,7 +2,7 @@
 
 public class Categoria : Entity
 {    
-    public string? Nome { get; set; }
-    public bool Active { get; set; } = true;
+    public new string? Nome { get; set; }
+    public bool Ativo { get; set; } = true;
 
 }

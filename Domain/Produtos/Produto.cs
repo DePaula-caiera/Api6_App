@@ -2,8 +2,8 @@
 
 public class Produto : Entity
 {  
-    public string? Nome { get; set; }
-    public int CategoriaId { get; set; }
+    public new string? Nome { get; set; }
+    public Guid CategoriaId { get; set; }
     public Categoria? Categoria { get;}
     public string? Descricao { get; set; }
     public bool HasEstoque { get; set; }
