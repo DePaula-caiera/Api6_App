@@ -1,8 +1,11 @@
-﻿using IWantApp.Domain.Produtos;
+﻿using Flunt.Notifications;
+using IWantApp.Domain.Produtos;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace IWantApp.Infra.Data;
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : IdentityDbContext<IdentityUser>
 {
     public DbSet<Produto>? Produtos { get; set; }
     public DbSet<Categoria>? Categorias { get; set; }
@@ -11,6 +14,8 @@ public class ApplicationDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        builder.Ignore<Notification>();
+
         builder.Entity<Produto>()
             .Property(p => p.Nome).IsRequired();
         builder.Entity<Produto>()
