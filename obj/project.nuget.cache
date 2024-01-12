@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YVxACofF2qSV9ocdOvVNbSsFygXenunzwaDl0cOWnQpGSpy6HFSDvj6pOIEk/CrqAHqfoepWybKkpraS32hvgQ==",
+  "dgSpecHash": "ukHfViaGtoXD6KV2VjvSdmpb/47AocFEmhjuSHbviI+lPErLbfIwDrN3PlWDTAlP13X8fs9mJ7z3/FI/DL+F7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\caiod\\.NET6\\API6_app\\IWantApp\\IWantApp.csproj",
+  "projectFilePath": "C:\\Users\\caiod\\.NET6\\Api6_App\\IWantApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\caiod\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",
     "C:\\Users\\caiod\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
