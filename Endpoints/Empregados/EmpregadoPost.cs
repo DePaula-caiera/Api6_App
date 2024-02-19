@@ -1,6 +1,4 @@
-﻿using IWantApp.Domain.Produtos;
-using IWantApp.Infra.Data;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 
 namespace IWantApp.Endpoints.Empregados;
@@ -17,19 +15,19 @@ public class EmpregadoPost
         var result = userManager.CreateAsync(user, empregadoRequest.Senha).Result;
 
         if(!result.Succeeded)
-            return Results.BadRequest(result.Errors.First());
+            return Results.ValidationProblem(result.Errors.ConvertToProblemDetails());
+
+        var userClaims = new List<Claim>()
+        {
+           new Claim("EmpregadosCodigo", empregadoRequest.EmpregadosCodigo),
+           new Claim("Nome", empregadoRequest.Nome)
+        };
 
         var claimResult =
-            userManager.AddClaimAsync(user, new Claim("EmpregadosCodigo", empregadoRequest.EmpregadosCodigo)).Result;
+            userManager.AddClaimsAsync(user, userClaims).Result;
 
         if(!claimResult.Succeeded)
-            return Results.BadRequest(result.Errors.First());
-
-        claimResult =
-            userManager.AddClaimAsync(user, new Claim("Nome", empregadoRequest.Nome)).Result;
-
-        if (!claimResult.Succeeded)
-            return Results.BadRequest(result.Errors.First());
+            return Results.BadRequest(result.Errors.First());       
 
         return Results.Created($"/empregados/{user.Id}", user.Id);
     }
