@@ -31,5 +31,6 @@ app.MapMethods(CategoriaPost.Template, CategoriaPost.Methods, CategoriaPost.Hand
 app.MapMethods(CategoriaGetAll.Template, CategoriaGetAll.Methods, CategoriaGetAll.Handle);
 app.MapMethods(CategoriaPut.Template, CategoriaPut.Methods, CategoriaPut.Handle);
 app.MapMethods(EmpregadoPost.Template, EmpregadoPost.Methods, EmpregadoPost.Handle);
+app.MapMethods(EmpregadoGetAll.Template, EmpregadoGetAll.Methods, EmpregadoGetAll.Handle);
 
 app.Run();

@@ -16,10 +16,6 @@ public static class ProblemDetailsExtensions
     {
         var dictionary = new Dictionary<string, string[]>();
         dictionary.Add("Error", error.Select(e => e.Description).ToArray());
-        return dictionary;
-
-        return error
-                .GroupBy(g => g.Code)
-                .ToDictionary(g => g.Key, g => g.Select(x => x.Description).ToArray());        
+        return dictionary;          
     }
 }
