@@ -3,7 +3,7 @@ using System.Security.Claims;
 
 namespace IWantApp.Endpoints.Empregados;
 
-public class TokenPost
+public class EmpregadoPost
 {
     public static string Template => "/empregados";
     public static string[] Methods => new string[] { HttpMethod.Post.ToString() };

@@ -135,3 +135,4 @@ C:\Users\caiod\.NET6\Api6_App\obj\Debug\net6.0\IWantApp.pdb
 C:\Users\caiod\.NET6\Api6_App\obj\Debug\net6.0\IWantApp.genruntimeconfig.cache
 C:\Users\caiod\.NET6\Api6_App\obj\Debug\net6.0\ref\IWantApp.dll
 C:\Users\caiod\.NET6\Api6_App\bin\Debug\net6.0\Dapper.dll
+C:\Users\caiod\.NET6\Api6_App\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
