@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using IWantApp.Infra.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
@@ -14,8 +15,7 @@ public class EmpregadoGetAll
     public static string[] Methods => new string[] { HttpMethod.Get.ToString() };
     public static Delegate Handle => Action;
 
-  
-
+    [Authorize(Policy = "Empregado004Policy")]
     public static IResult Action(int? page, int? rows, QueryAllUsersWithClaimName query)
     {
 
